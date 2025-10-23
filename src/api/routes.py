@@ -32,7 +32,7 @@ def signup():
             return jsonify({"error": "El usuario ya existe"}), 400
 
         hashed_password = generate_password_hash(password)
-        new_user = User(email=email, password=hashed_password, is_active=True)
+        new_user = User(email=email, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
 
