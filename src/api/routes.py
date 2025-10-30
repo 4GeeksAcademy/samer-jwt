@@ -7,6 +7,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 api = Blueprint('api', __name__)
 
 # Endpoint de ejemplo (probablemente ya lo tenías)
+
+
 @api.route('/hello', methods=['GET'])
 def handle_hello():
     response_body = {
